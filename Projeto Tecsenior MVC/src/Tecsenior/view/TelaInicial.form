@@ -43,19 +43,17 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jButton1" pref="182" max="32767" attributes="0"/>
-                      <Component id="jButton4" max="32767" attributes="0"/>
-                  </Group>
-                  <Component id="jButton6" min="-2" pref="183" max="-2" attributes="0"/>
+                  <Component id="jButtonFuncionario" min="-2" pref="182" max="-2" attributes="0"/>
+                  <Component id="jButtonChamado" min="-2" pref="183" max="-2" attributes="0"/>
+                  <Component id="jButton5" min="-2" pref="182" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jButton2" min="-2" pref="182" max="-2" attributes="0"/>
                   <Component id="jButton3" min="-2" pref="182" max="-2" attributes="0"/>
-                  <Component id="jButton5" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
+                  <Component id="jButtonCliente" min="-2" pref="182" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="231" max="32767" attributes="0"/>
+              <EmptySpace pref="26" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -64,18 +62,18 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace pref="86" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton5" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                  <Component id="jButton6" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jButtonChamado" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jButtonCliente" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton4" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                  <Component id="jButton3" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton1" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jButtonFuncionario" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
                   <Component id="jButton2" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jButton5" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jButton3" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
           </Group>
@@ -83,7 +81,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="jButtonCliente">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cliente"/>
         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -116,7 +114,7 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton4">
+    <Component class="javax.swing.JButton" name="jButtonFuncionario">
       <Properties>
         <Property name="text" type="java.lang.String" value="Funcinario"/>
       </Properties>
@@ -126,10 +124,13 @@
         <Property name="text" type="java.lang.String" value="Pedidos"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton6">
+    <Component class="javax.swing.JButton" name="jButtonChamado">
       <Properties>
         <Property name="text" type="java.lang.String" value="Chamados"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonChamadoActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
