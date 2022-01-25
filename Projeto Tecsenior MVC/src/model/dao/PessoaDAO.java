@@ -27,11 +27,12 @@ public class PessoaDAO {
         PreparedStatement stmt = null;
                 
         try {
-            stmt = con.prepareStatement("call sp_criar_pessoa(?, ?, ?, ?)");
+            stmt = con.prepareStatement("call sp_criar_pessoa(?, ?, ?, ?, ?)");
             stmt.setString(1, pes.getNome());
             stmt.setString(2, pes.getCep());
             stmt.setString(3, pes.getTelefone());
             stmt.setInt(4, pes.getConta_financeira().getId());
+            stmt.setInt(5, pes.getLogin().getId());
             
             stmt.executeUpdate();
             
@@ -61,6 +62,8 @@ public class PessoaDAO {
                 pessoa.setNome(rs.getString("nome"));
                 pessoa.setCep(rs.getString("cep"));
                 pessoa.setTelefone(rs.getString("telefone"));
+                pessoa.getConta_financeira().setId(rs.getInt("conta_financeira"));
+                pessoa.getLogin().setId(rs.getInt("login"));
                 pessoas.add(pessoa);
             }
         } catch (SQLException ex) {
@@ -78,12 +81,13 @@ public class PessoaDAO {
         PreparedStatement stmt = null;
                 
         try {
-            stmt = con.prepareStatement("call sp_atualizar_Pessoa(?, ?, ?, ?)");
+            stmt = con.prepareStatement("call sp_atualizar_Pessoa(?, ?, ?, ?, ?, ?)");
             stmt.setString(1, pes.getNome());
             stmt.setString(2, pes.getCep());
             stmt.setString(3, pes.getTelefone());
             stmt.setInt(4, pes.getConta_financeira().getId());
-            stmt.setInt(5, pes.getId());
+            stmt.setInt(5, pes.getLogin().getId());
+            stmt.setInt(6, pes.getId());
             
             stmt.executeUpdate();
             

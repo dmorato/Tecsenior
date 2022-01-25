@@ -16,6 +16,7 @@ public class Pessoa {
     private String cep;
     private String telefone;
     private Conta_financeira conta_financeira;
+    private Login login;
 
     public int getId() {
         return id;
@@ -55,6 +56,14 @@ public class Pessoa {
 
     public void setConta_financeira(Conta_financeira conta_financeira) {
         this.conta_financeira = conta_financeira;
+    }
+
+    public Login getLogin() {
+        return login;
+    }
+
+    public void setLogin(Login login) {
+        this.login = login;
     }
     
     
