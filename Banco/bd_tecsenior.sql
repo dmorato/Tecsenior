@@ -526,9 +526,9 @@ SELECT * FROM pessoa;
 END $$
 DELIMITER ;
 
-DROP PROCEDURE IF EXISTS sp_deletar_pessoa;
+DROP PROCEDURE IF EXISTS sp_excluir_pessoa;
 DELIMITER $$
-CREATE PROCEDURE sp_deletar_pessoa (IN sp_id INT)
+CREATE PROCEDURE sp_excluir_pessoa (IN sp_id INT)
 BEGIN 
 DELETE FROM pessoa WHERE pessoa.id = sp_id;
 SELECT * FROM pessoa;
@@ -602,9 +602,9 @@ WHERE id = sp_id;
 END $$
 DELIMITER ;
 
-DROP PROCEDURE IF EXISTS sp_deletar_chamado;
+DROP PROCEDURE IF EXISTS sp_excluir_chamado;
 DELIMITER $$
-CREATE PROCEDURE sp_deletar_chamado(IN sp_id INT)
+CREATE PROCEDURE sp_excluir_chamado(IN sp_id INT)
 BEGIN
 DELETE FROM chamado WHERE id = sp_id;
 END $$
@@ -630,9 +630,9 @@ SELECT * FROM login;
 END $$
 DELIMITER ;
 
-DROP PROCEDURE IF EXISTS sp_deletar_login;
+DROP PROCEDURE IF EXISTS sp_excluir_login;
 DELIMITER $$
-CREATE PROCEDURE sp_deletar_login (IN sp_id int)
+CREATE PROCEDURE sp_excluir_login (IN sp_id int)
 BEGIN
 DELETE FROM login WHERE id = sp_id;
 SELECT * FROM login;
@@ -668,9 +668,9 @@ SELECT conta, agencia, instituicao FROM conta_financeira;
 END $$
 DELIMITER ;
 
-DROP PROCEDURE IF EXISTS sp_deletar_conta_financeira;
+DROP PROCEDURE IF EXISTS sp_excluir_conta_financeira;
 DELIMITER $$
-CREATE PROCEDURE sp_deletar_conta_financeira (IN sp_id int)
+CREATE PROCEDURE sp_excluir_conta_financeira (IN sp_id int)
 BEGIN
 DELETE FROM conta_financeira WHERE id = sp_id;
 SELECT * FROM conta_financeira;
@@ -796,6 +796,19 @@ delete from funcionario
 where id = sp_id;
 END $$
 DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS sp_listar_cliente;
+DELIMITER $$
+CREATE PROCEDURE sp_listar_cliente ()
+BEGIN
+SELECT cCliente.id AS Matricula, cPessoa.nome AS Nome, cLogin.email AS Email FROM pessoa cPessoa
+JOIN login cLogin
+ON cPessoa.login_id = cLogin.id
+JOIN cliente cCliente
+ON cPessoa.id = cCliente.pessoa_id;
+END $$
+
 
 DROP PROCEDURE IF EXISTS sp_criar_cliente;
 DELIMITER $$
