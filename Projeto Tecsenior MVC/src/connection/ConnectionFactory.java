@@ -19,7 +19,7 @@ import java.util.logging.Logger;
  */
 public class ConnectionFactory {
     
-    private static final String DRIVER = "com.mysql.jdbc.Driver";
+    private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
     private static final String URL = "jdbc:mysql://localhost:3306/bd_tecsenior";
     private static final String USER = "root";
     private static final String PASSWORD = "";
@@ -33,18 +33,18 @@ public class ConnectionFactory {
         }
     }
     
-    public static void closeConnection(Connection c){
+    public static void closeConnection(Connection con){
         try {
-            if (c != null) {
-                c.close();
+            if (con != null) {
+                con.close();
             }
         } catch (SQLException ex) {
             Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
-    public static void closeConnection(Connection c, PreparedStatement stmt){
-        closeConnection(c);
+    public static void closeConnection(Connection con, PreparedStatement stmt){
+        closeConnection(con);
         try {
             if (stmt != null) {
                 stmt.close();
@@ -54,8 +54,8 @@ public class ConnectionFactory {
         }
     }
     
-    public static void closeConnection(Connection c, PreparedStatement stmt, ResultSet rs){
-        closeConnection(c, stmt);
+    public static void closeConnection(Connection con, PreparedStatement stmt, ResultSet rs){
+        closeConnection(con, stmt);
         try {
             if (rs != null) {
                 rs.close();

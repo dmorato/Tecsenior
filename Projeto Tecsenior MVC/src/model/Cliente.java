@@ -5,7 +5,6 @@
  */
 package model;
 
-import java.util.ArrayList;
 
 /**
  *
@@ -13,7 +12,37 @@ import java.util.ArrayList;
  */
 public class Cliente {
     
-    private Integer idCliente;
-    private ArrayList<Pessoa>pessoa = new ArrayList<Pessoa>();
+    private Integer id;
+    private Pessoa pessoa;
+
+    public Cliente(Integer id, Pessoa pessoa) {
+        this.id = id;
+        this.pessoa = pessoa;
+    }
+
+    public Cliente(Integer id) {
+        this.id = id;
+    }
+
+    public Cliente() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+    }
+    
     
 }

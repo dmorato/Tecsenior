@@ -5,7 +5,6 @@
  */
 package model;
 
-import java.util.ArrayList;
 
 /**
  *
@@ -13,11 +12,50 @@ import java.util.ArrayList;
  */
 public class Pedido {
     
-    private Integer id_Pedido;
-    private String Situacao;
-    private ArrayList<Cliente>Cliente = new ArrayList<Cliente>();
-    private ArrayList<Plano>Plano = new ArrayList<Plano>();
-    private ArrayList<Pagamento>Pagamento = new ArrayList<Pagamento>();
-    
+    private int id;
+    private String situacao;
+    private Cliente cliente;
+    private Plano plano;
+    private Pagamento pagamento;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getSituacao() {
+        return situacao;
+    }
+
+    public void setSituacao(String situacao) {
+        this.situacao = situacao;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public Plano getPlano() {
+        return plano;
+    }
+
+    public void setPlano(Plano plano) {
+        this.plano = plano;
+    }
+
+    public Pagamento getPagamento() {
+        return pagamento;
+    }
+
+    public void setPagamento(Pagamento pagamento) {
+        this.pagamento = pagamento;
+    }
     
 }

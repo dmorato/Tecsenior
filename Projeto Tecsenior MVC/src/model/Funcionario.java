@@ -5,15 +5,43 @@
  */
 package model;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author Diogo Santos
  */
 public class Funcionario {
     
-    private Integer IdFuncionario;
-    private ArrayList<Pessoa>pessoa = new ArrayList<Pessoa>();
-    private ArrayList<Cargo>Cargo = new ArrayList<Cargo>();
+    private int Id;
+    private Pessoa pessoa;
+    private Cargo cargo;
+
+    public int getId() {
+        return Id;
+    }
+
+    public void setId(int Id) {
+        this.Id = Id;
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+    }
+
+    public Cargo getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(Cargo cargo) {
+        this.cargo = cargo;
+    }
+
+    public Object getFuncionario() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
 }

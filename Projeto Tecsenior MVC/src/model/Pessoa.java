@@ -5,19 +5,57 @@
  */
 package model;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author Diogo Santos
  */
 public class Pessoa {
     
-    private Integer id;
+    private int id;
     private String nome;
     private String cep;
     private String telefone;
-    private ArrayList<Login>login = new ArrayList<Login>();
-    private ArrayList<Conta_financeira>conta_financeira = new ArrayList<Conta_financeira>();
+    private Conta_financeira conta_financeira;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCep() {
+        return cep;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public Conta_financeira getConta_financeira() {
+        return conta_financeira;
+    }
+
+    public void setConta_financeira(Conta_financeira conta_financeira) {
+        this.conta_financeira = conta_financeira;
+    }
+    
     
 }

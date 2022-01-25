@@ -11,10 +11,42 @@ package model;
  */
 public class Conta_financeira {
     
-    private Integer idConta_financeira;
-    private Integer Agencia;
-    private Integer Conta_Corrente;
-    private String Institucao;
+    private int id;
+    private int agencia;
+    private int conta;
+    private String instituicao;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getAgencia() {
+        return agencia;
+    }
+
+    public void setAgencia(int agencia) {
+        this.agencia = agencia;
+    }
+
+    public int getConta() {
+        return conta;
+    }
+
+    public void setConta(int conta) {
+        this.conta = conta;
+    }
+
+    public String getInstituicao() {
+        return instituicao;
+    }
+
+    public void setInstituicao(String instituicao) {
+        this.instituicao = instituicao;
+    }
     
     
 }

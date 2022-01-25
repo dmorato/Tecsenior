@@ -2,26 +2,30 @@ package model;
 
 public class Cargo {
     
-    private int idCargo;
+    private int id;
     private String nome;
     private double salario;
     private int carga_horaria;
     private String descricao;
-
+    
     public Cargo(int idCargo, String nome, double salario, int carga_horaria, String descricao) {
-        this.idCargo = idCargo;
+        this.id = idCargo;
         this.nome = nome;
         this.salario = salario;
         this.carga_horaria = carga_horaria;
         this.descricao = descricao;
     }
+
+    public Cargo() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
-    public int getIdCargo() {
-        return idCargo;
+    public int getId() {
+        return id;
     }
 
-    public void setIdCargo(int idCargo) {
-        this.idCargo = idCargo;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {

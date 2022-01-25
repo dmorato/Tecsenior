@@ -907,3 +907,20 @@ delete from pagamento
 where id = sp_id;
 END $$
 DELIMITER ;
+
+DROP PROCEDURE IF EXISTS sp_listar_login
+DELIMITER $$
+CREATE PROCEDURE sp_listar_login ()
+BEGIN
+SELECT email, cpf, senha FROM login;
+END $$
+DELIMITER ;
+call sp_listar_login
+
+DROP PROCEDURE IF EXISTS sp_logar
+DELIMITER $$
+CREATE PROCEDURE sp_logar(IN sp_cpf INT, IN sp_senha VARCHAR(32))
+BEGIN
+SELECT * FROM login WHERE cpf = sp_cpf AND senha = sp_senha;
+END $$
+DELIMITER ;
