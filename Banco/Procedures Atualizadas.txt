@@ -529,3 +529,13 @@ JOIN login pLogin
 ON pPessoa.login_id = pLogin.id;
 END $$
 DELIMITER ;
+
+-- Efetuar login
+
+DROP PROCEDURE IF EXISTS sp_logar;
+DELIMITER $$
+CREATE PROCEDURE sp_logar(IN sp_cpf INT, IN sp_senha VARCHAR(32))
+BEGIN
+SELECT * FROM login WHERE cpf = sp_cpf AND senha = sp_senha;
+END $$
+DELIMITER ;
