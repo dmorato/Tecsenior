@@ -526,6 +526,17 @@ SELECT * FROM pessoa;
 END $$
 DELIMITER ;
 
+
+DROP PROCEDURE IF EXISTS sp_listar_pessoa;
+DELIMITER $$
+CREATE PROCEDURE sp_listar_pessoa ()
+BEGIN
+SELECT pPessoa.id AS Codigo, pPessoa.nome AS Nome, pLogin.email AS Email, pLogin.cpf as CPF, pPessoa.cep AS CEP, pPessoa.telefone AS Telefone  FROM pessoa pPessoa
+JOIN login pLogin 
+ON pPessoa.login_id = pLogin.id;
+END $$
+DELIMITER ;
+
 DROP PROCEDURE IF EXISTS sp_excluir_pessoa;
 DELIMITER $$
 CREATE PROCEDURE sp_excluir_pessoa (IN sp_id INT)
