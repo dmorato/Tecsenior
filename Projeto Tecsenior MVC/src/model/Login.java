@@ -3,16 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Tecsenior.Model;
+package model;
 
 /**
  *
  * @author Diogo Santos
  */
-public class Plano {
+public class Login {
     
-    private Integer idPlano;
-    private String nome;
-    private Double mensalidade;
-    private String descricao;
+    private Integer idLogin;
+    private String email;
+    private Integer cpf;
+    private String senha;
+
+
+    
 }

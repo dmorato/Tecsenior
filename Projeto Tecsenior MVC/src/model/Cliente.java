@@ -3,14 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Tecsenior.Model;
+package model;
+
+import java.util.ArrayList;
 
 /**
  *
  * @author Diogo Santos
  */
-public class Pagamento {
+public class Cliente {
     
-    private Integer idPagamento;
-    private String forma_pagamento;
+    private Integer idCliente;
+    private ArrayList<Pessoa>pessoa = new ArrayList<Pessoa>();
+    
 }

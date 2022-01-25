@@ -3,18 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Tecsenior.Model;
+package model;
 
 /**
  *
  * @author Diogo Santos
  */
-public class Conta_financeira {
+public class Pagamento {
     
-    private Integer idConta_financeira;
-    private Integer Agencia;
-    private Integer Conta_Corrente;
-    private String Institucao;
-    
-    
+    private Integer idPagamento;
+    private String forma_pagamento;
 }

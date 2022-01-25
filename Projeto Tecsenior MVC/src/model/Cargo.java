@@ -1,4 +1,4 @@
-package Tecsenior.Model;
+package model;
 
 public class Cargo {
     

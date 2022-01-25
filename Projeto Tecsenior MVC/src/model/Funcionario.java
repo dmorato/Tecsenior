@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Tecsenior.Model;
+package model;
 
 import java.util.ArrayList;
 
@@ -11,11 +11,9 @@ import java.util.ArrayList;
  *
  * @author Diogo Santos
  */
-public class Tec_Terceiro {
+public class Funcionario {
     
-    private Integer idTecTerceiro;
-    private String especializacacao;
-    private String escalabilidade;
+    private Integer IdFuncionario;
     private ArrayList<Pessoa>pessoa = new ArrayList<Pessoa>();
-    
+    private ArrayList<Cargo>Cargo = new ArrayList<Cargo>();
 }

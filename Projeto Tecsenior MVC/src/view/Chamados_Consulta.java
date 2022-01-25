@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Tecsenior.view;
+package view;
 
 /**
  *
  * @author Diogo Santos
  */
-public class Pedidos_Consulta1 extends javax.swing.JFrame {
+public class Chamados_Consulta extends javax.swing.JFrame {
 
     /**
      * Creates new form Func_Consulta
      */
-    public Pedidos_Consulta1() {
+    public Chamados_Consulta() {
         initComponents();
     }
 
@@ -134,7 +134,7 @@ public class Pedidos_Consulta1 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Pedidos_Consulta1().setVisible(true);
+                new Chamados_Consulta().setVisible(true);
             }
         });
     }
